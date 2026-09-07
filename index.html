@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080a0f">
+
+  <title>Calculadora</title>
+
+  <link rel="stylesheet" href="/includes/style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <section class="calculator">
+
+      <header class="topbar">
+        <div>
+          <span class="status"></span>
+          <span>Calculadora</span>
+        </div>
+
+        <button id="historyBtn" class="icon-btn" aria-label="Historial">
+          ↶
+        </button>
+      </header>
+
+      <div class="display">
+        <div id="expression" class="expression"></div>
+
+        <div id="result" class="result">
+          0
+        </div>
+      </div>
+
+      <div class="keys">
+
+        <button class="key function" data-action="clear">AC</button>
+        <button class="key function" data-action="backspace">⌫</button>
+        <button class="key function" data-value="%">%</button>
+        <button class="key operator" data-value="/">÷</button>
+
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+        <button class="key operator" data-value="*">×</button>
+
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+        <button class="key operator" data-value="-">−</button>
+
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+        <button class="key operator" data-value="+">+</button>
+
+        <button class="key zero" data-value="0">0</button>
+        <button class="key" data-value=".">.</button>
+        <button class="key equals" data-action="calculate">=</button>
+
+      </div>
+
+    </section>
+
+    <aside id="historyPanel" class="history">
+
+      <div class="history-header">
+        <h2>Historial</h2>
+
+        <button id="closeHistory" class="icon-btn">
+          ×
+        </button>
+      </div>
+
+      <div id="historyList" class="history-list">
+        <p class="empty">
+          No hay operaciones todavía.
+        </p>
+      </div>
+
+      <button id="clearHistory" class="clear-history">
+        Limpiar historial
+      </button>
+
+    </aside>
+
+  </main>
+
+  <script src="/includes/script.js"></script>
+
+</body>
+</html>
